@@ -14,6 +14,10 @@
     "dist"
   ],
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "postinstall": "simple-git-hooks",
+    "format": "prettier --write --cache .",
+    "lint": "eslint --cache .",
     "dev": "unbuild --stub",
     "build": "unbuild",
     "typecheck": "tsc --noEmit"
@@ -42,7 +46,25 @@
     "prompts": "^2.4.2",
     "rollup": "^4.19.1",
     "rollup-plugin-license": "^3.5.2",
+    "simple-git-hooks": "^2.11.1",
     "unbuild": "^2.0.0",
-    "vitest": "^2.0.4"
-  }
+    "vitest": "^2.0.4",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^7.17.0"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm exec lint-staged --concurrent false"
+  },
+  "lint-staged": {
+    "*": [
+      "prettier --write --cache --ignore-unknown"
+    ],
+    "packages/*/{src,types}/**/*.ts": [
+      "eslint --cache --fix"
+    ],
+    "packages/**/*.d.ts": [
+      "eslint --cache --fix"
+    ]
+  },
+  "packageManager": "pnpm@9.6.0"
 }
