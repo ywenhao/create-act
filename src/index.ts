@@ -400,7 +400,7 @@ async function init() {
   }
 
   // determine template
-  let template: string = variant || framework?.name || argTemplate
+  const template: string = variant || framework?.name || argTemplate
 
   const pkgInfo = pkgFromUserAgent(process.env.npm_config_user_agent)
   const pkgManager = pkgInfo ? pkgInfo.name : 'npm'
