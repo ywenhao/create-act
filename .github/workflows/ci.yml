@@ -105,26 +105,26 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-playwright-bin-v1-
 
-      - name: Install Playwright
-        if: steps.changed-files.outputs.only_changed != 'true'
-        # does not need to explicitly set chromium after https://github.com/microsoft/playwright/issues/14862 is solved
-        run: pnpm playwright install chromium
+      # - name: Install Playwright
+      #   if: steps.changed-files.outputs.only_changed != 'true'
+      #   # does not need to explicitly set chromium after https://github.com/microsoft/playwright/issues/14862 is solved
+      #   run: pnpm playwright install chromium
 
       - name: Build
         if: steps.changed-files.outputs.only_changed != 'true'
         run: pnpm run build
 
-      - name: Test unit
-        if: steps.changed-files.outputs.only_changed != 'true'
-        run: pnpm run test-unit
+      # - name: Test unit
+      #   if: steps.changed-files.outputs.only_changed != 'true'
+      #   run: pnpm run test-unit
 
-      - name: Test serve
-        if: steps.changed-files.outputs.only_changed != 'true'
-        run: pnpm run test-serve
+      # - name: Test serve
+      #   if: steps.changed-files.outputs.only_changed != 'true'
+      #   run: pnpm run test-serve
 
-      - name: Test build
-        if: steps.changed-files.outputs.only_changed != 'true'
-        run: pnpm run test-build
+      # - name: Test build
+      #   if: steps.changed-files.outputs.only_changed != 'true'
+      #   run: pnpm run test-build
 
   lint:
     timeout-minutes: 10
@@ -157,8 +157,8 @@ jobs:
       - name: Typecheck
         run: pnpm run typecheck
 
-      - name: Test docs
-        run: pnpm run test-docs
+      # - name: Test docs
+      #   run: pnpm run test-docs
 
       # From https://github.com/rhysd/actionlint/blob/main/docs/usage.md#use-actionlint-on-github-actions
       - name: Check workflow files

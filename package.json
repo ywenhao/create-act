@@ -20,7 +20,9 @@
     "lint": "eslint --cache .",
     "dev": "unbuild --stub",
     "build": "unbuild",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build",
+    "ci-publish": "tsx scripts/publishCI.ts"
   },
   "engines": {
     "node": "^18.0.0 || >=20.0.0"
@@ -37,20 +39,23 @@
   "devDependencies": {
     "@types/minimist": "^1.2.5",
     "@types/prompts": "^2.4.9",
+    "@vitejs/release-scripts": "^1.3.2",
     "cross-spawn": "^7.0.3",
     "execa": "^9.3.0",
     "fs-extra": "^11.2.0",
     "kolorist": "^1.8.0",
     "minimist": "^1.2.8",
     "picocolors": "^1.0.1",
+    "prettier": "^3.3.3",
     "prompts": "^2.4.2",
     "rollup": "^4.19.1",
     "rollup-plugin-license": "^3.5.2",
     "simple-git-hooks": "^2.11.1",
-    "unbuild": "^2.0.0",
-    "vitest": "^2.0.4",
+    "tsx": "^4.16.5",
     "typescript": "^5.5.3",
-    "typescript-eslint": "^7.17.0"
+    "typescript-eslint": "^7.17.0",
+    "unbuild": "^2.0.0",
+    "vitest": "^2.0.4"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm exec lint-staged --concurrent false"
