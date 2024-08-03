@@ -9,7 +9,10 @@ const CLI_PATH = join(__dirname, '..')
 const projectName = 'test-app'
 const genPath = join(__dirname, projectName)
 
-const run = <SO extends SyncOptions>(args: string[], options?: SO): SyncResult<SO> => {
+const run = <SO extends SyncOptions>(
+  args: string[],
+  options?: SO,
+): SyncResult<SO> => {
   return execaCommandSync(`node ${CLI_PATH} ${args.join(' ')}`, options)
 }
 
@@ -56,7 +59,9 @@ test('prompts for the framework on not supplying a value for --template', () => 
 
 test('prompts for the framework on supplying an invalid template', () => {
   const { stdout } = run([projectName, '--template', 'unknown'])
-  expect(stdout).toContain(`"unknown" isn't a valid template. Please choose from below:`)
+  expect(stdout).toContain(
+    `"unknown" isn't a valid template. Please choose from below:`,
+  )
 })
 
 test('asks to overwrite non-empty target directory', () => {

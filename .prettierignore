@@ -1,0 +1,9 @@
+CHANGELOG.md
+__tests__/fixtures
+playground-temp/
+dist/
+temp/
+LICENSE.md
+pnpm-lock.yaml
+pnpm-workspace.yaml
+playground/tsconfig-json-load-error/has-error/tsconfig.json

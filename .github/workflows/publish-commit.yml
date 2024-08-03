@@ -2,7 +2,7 @@ name: Publish Any Commit
 
 env:
   # install playwright binary manually (because pnpm only runs install script once)
-  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
+  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: "1"
 
 on:
   push:

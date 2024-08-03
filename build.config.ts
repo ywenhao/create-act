@@ -24,7 +24,11 @@ export default defineBuildConfig({
       options.plugins = [
         options.plugins,
         // @ts-expect-error TODO: unbuild uses rollup v3 and Vite uses rollup v4
-        licensePlugin(path.resolve(__dirname, './LICENSE'), 'create-act license', 'create-act'),
+        licensePlugin(
+          path.resolve(__dirname, './LICENSE'),
+          'create-act license',
+          'create-act',
+        ),
       ]
     },
   },

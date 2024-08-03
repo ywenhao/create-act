@@ -91,7 +91,10 @@ export default tseslint.config(
         'error',
         { allowArgumentsExplicitlyTypedAsAny: true },
       ],
-      '@typescript-eslint/no-empty-function': ['error', { allow: ['arrowFunctions'] }],
+      '@typescript-eslint/no-empty-function': [
+        'error',
+        { allow: ['arrowFunctions'] },
+      ],
       '@typescript-eslint/no-empty-interface': 'off',
       '@typescript-eslint/no-explicit-any': 'off', // maybe we should turn this on in a new PR
       'no-extra-semi': 'off',
@@ -220,7 +223,10 @@ export default tseslint.config(
   },
   {
     name: 'disables/create-vite/templates',
-    files: ['packages/create-vite/template-*/**/*.?([cm])[jt]s?(x)', '**/build.config.ts'],
+    files: [
+      'packages/create-vite/template-*/**/*.?([cm])[jt]s?(x)',
+      '**/build.config.ts',
+    ],
     rules: {
       'no-undef': 'off',
       'n/no-missing-import': 'off',
@@ -278,5 +284,5 @@ export default tseslint.config(
       'no-console': 'off',
       '@typescript-eslint/ban-ts-comment': 'off',
     },
-  }
+  },
 )
