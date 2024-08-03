@@ -29,13 +29,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ywenhao/create-act.git",
-    "directory": "packages/create-vite"
+    "url": "git+https://github.com/ywenhao/create-act.git"
   },
   "bugs": {
     "url": "https://github.com/ywenhao/create-act/issues"
   },
-  "homepage": "https://github.com/ywenhao/vite/create-act/readme",
+  "homepage": "https://github.com/ywenhao/create-act/readme",
   "devDependencies": {
     "@eslint/js": "^9.8.0",
     "@types/minimist": "^1.2.5",
