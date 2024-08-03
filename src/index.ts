@@ -573,10 +573,10 @@ function pkgFromUserAgent(userAgent: string | undefined) {
   }
 }
 
-function editFile(file: string, callback: (content: string) => string) {
-  const content = fs.readFileSync(file, 'utf-8')
-  fs.writeFileSync(file, callback(content), 'utf-8')
-}
+// function editFile(file: string, callback: (content: string) => string) {
+//   const content = fs.readFileSync(file, 'utf-8')
+//   fs.writeFileSync(file, callback(content), 'utf-8')
+// }
 
 init().catch((e) => {
   console.error(e)
