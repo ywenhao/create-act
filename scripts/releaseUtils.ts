@@ -20,7 +20,6 @@ export async function getLatestTag(): Promise<string> {
 }
 
 export async function logRecentCommits(pkgName: string): Promise<void> {
-  console.log({ pkgName })
   const tag = await getLatestTag()
   if (!tag) return
   const sha = await run('git', ['rev-list', '-n', '1', tag], {

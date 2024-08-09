@@ -8,6 +8,7 @@ release({
   packages: ['create-act'],
   toTag: (pkg, version) => `v${version}`,
   logChangelog: (pkg) => logRecentCommits(pkg),
+  getPkgDir: (pkg) => `./`,
   generateChangelog: async () => {
     await updateTemplateVersions()
 
