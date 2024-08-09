@@ -41,8 +41,8 @@ export async function logRecentCommits(pkgName: string): Promise<void> {
 }
 
 export async function updateTemplateVersions(): Promise<void> {
-  const viteVersion = fs.readJSONSync('package.json').version
-  if (/beta|alpha|rc/.test(viteVersion)) return
+  const version = fs.readJSONSync('package.json').version
+  if (/beta|alpha|rc/.test(version)) return
 
   const dir = './templates'
   const templates = readdirSync(dir)
@@ -50,7 +50,7 @@ export async function updateTemplateVersions(): Promise<void> {
   for (const template of templates) {
     const pkgPath = path.join(dir, template, `package.json`)
     const pkg = fs.readJSONSync(pkgPath)
-    pkg.devDependencies.vite = `^` + viteVersion
+    pkg.version = version
     writeFileSync(pkgPath, JSON.stringify(pkg, null, 2) + '\n')
   }
 }
