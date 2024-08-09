@@ -21,6 +21,7 @@
     "dev": "unbuild --stub",
     "build": "unbuild",
     "typecheck": "tsc --noEmit",
+    "release": "tsx scripts/release.ts",
     "prepublishOnly": "npm run build",
     "ci-publish": "tsx scripts/publishCI.ts"
   },
