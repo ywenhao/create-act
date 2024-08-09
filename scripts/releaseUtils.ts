@@ -13,14 +13,15 @@ export function run<EO extends ExecaOptions>(
   return execa(bin, args, { stdio: 'inherit', ...opts }) as any
 }
 
-export async function getLatestTag(pkgName: string): Promise<string> {
-  const pkgJson = await fs.readJson(`./${pkgName}/package.json`)
+export async function getLatestTag(): Promise<string> {
+  const pkgJson = await fs.readJson(`./package.json`)
   const version = pkgJson.version
-  return pkgName === 'vite' ? `v${version}` : `${pkgName}@${version}`
+  return `v${version}`
 }
 
 export async function logRecentCommits(pkgName: string): Promise<void> {
-  const tag = await getLatestTag(pkgName)
+  console.log({ pkgName })
+  const tag = await getLatestTag()
   if (!tag) return
   const sha = await run('git', ['rev-list', '-n', '1', tag], {
     stdio: 'pipe',
@@ -34,7 +35,7 @@ export async function logRecentCommits(pkgName: string): Promise<void> {
   )
   await run(
     'git',
-    ['--no-pager', 'log', `${sha}..HEAD`, '--oneline', '--', `./${pkgName}`],
+    ['--no-pager', 'log', `${sha}..HEAD`, '--oneline', '--', `.`],
     { stdio: 'inherit' },
   )
   console.log()
@@ -44,10 +45,9 @@ export async function updateTemplateVersions(): Promise<void> {
   const viteVersion = fs.readJSONSync('package.json').version
   if (/beta|alpha|rc/.test(viteVersion)) return
 
-  const dir = './'
-  const templates = readdirSync(dir).filter((dir) =>
-    dir.startsWith('template-'),
-  )
+  const dir = './templates'
+  const templates = readdirSync(dir)
+
   for (const template of templates) {
     const pkgPath = path.join(dir, template, `package.json`)
     const pkg = fs.readJSONSync(pkgPath)

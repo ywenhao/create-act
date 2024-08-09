@@ -4,11 +4,11 @@ import { logRecentCommits, run, updateTemplateVersions } from './releaseUtils'
 import extendCommitHash from './extendCommitHash'
 
 release({
-  repo: 'vite',
-  packages: [],
+  repo: 'create-act',
+  packages: ['create-act'],
   toTag: (pkg, version) => `v${version}`,
   logChangelog: (pkg) => logRecentCommits(pkg),
-  generateChangelog: async (pkgName) => {
+  generateChangelog: async () => {
     await updateTemplateVersions()
 
     console.log(colors.cyan('\nGenerating changelog...'))
@@ -22,8 +22,8 @@ release({
       '--commit-path',
       '.',
     ]
-    await run('npx', changelogArgs, { cwd: `./${pkgName}` })
+    await run('npx', changelogArgs, { cwd: `.` })
     // conventional-changelog generates links with short commit hashes, extend them to full hashes
-    extendCommitHash(`./${pkgName}/CHANGELOG.md`)
+    extendCommitHash(`./CHANGELOG.md`)
   },
 })
