@@ -14,7 +14,7 @@ export function run<EO extends ExecaOptions>(
 }
 
 export async function getLatestTag(pkgName: string): Promise<string> {
-  const pkgJson = await fs.readJson(`packages/${pkgName}/package.json`)
+  const pkgJson = await fs.readJson(`./${pkgName}/package.json`)
   const version = pkgJson.version
   return pkgName === 'vite' ? `v${version}` : `${pkgName}@${version}`
 }
@@ -34,14 +34,7 @@ export async function logRecentCommits(pkgName: string): Promise<void> {
   )
   await run(
     'git',
-    [
-      '--no-pager',
-      'log',
-      `${sha}..HEAD`,
-      '--oneline',
-      '--',
-      `packages/${pkgName}`,
-    ],
+    ['--no-pager', 'log', `${sha}..HEAD`, '--oneline', '--', `./${pkgName}`],
     { stdio: 'inherit' },
   )
   console.log()
