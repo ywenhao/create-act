@@ -2,18 +2,8 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import minimist from 'minimist'
+import { green, red, reset, yellow } from 'kolorist'
 import prompts from 'prompts'
-import {
-  blue,
-  cyan,
-  green,
-  lightBlue,
-  lightRed,
-  magenta,
-  red,
-  reset,
-  yellow,
-} from 'kolorist'
 
 // Avoids autoconversion to number of the project name by defining that the args
 // non associated with an option ( _ ) needs to be parsed as a string. See #4606
