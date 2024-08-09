@@ -5,12 +5,12 @@ import extendCommitHash from './extendCommitHash'
 
 release({
   repo: 'vite',
-  packages: ['create-act'],
+  packages: [],
   toTag: (pkg, version) =>
     pkg === 'vite' ? `v${version}` : `${pkg}@${version}`,
   logChangelog: (pkg) => logRecentCommits(pkg),
   generateChangelog: async (pkgName) => {
-    if (pkgName === 'create-act') await updateTemplateVersions()
+    await updateTemplateVersions()
 
     console.log(colors.cyan('\nGenerating changelog...'))
     const changelogArgs = [
