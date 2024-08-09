@@ -6,8 +6,7 @@ import extendCommitHash from './extendCommitHash'
 release({
   repo: 'vite',
   packages: [],
-  toTag: (pkg, version) =>
-    pkg === 'vite' ? `v${version}` : `${pkg}@${version}`,
+  toTag: (pkg, version) => `v${version}`,
   logChangelog: (pkg) => logRecentCommits(pkg),
   generateChangelog: async (pkgName) => {
     await updateTemplateVersions()
