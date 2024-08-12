@@ -44,7 +44,7 @@ export async function updateTemplateVersions(): Promise<void> {
   const version = fs.readJSONSync('package.json').version
   if (/beta|alpha|rc/.test(version)) return
 
-  const dir = './templates'
+  const dir = './template'
   const templates = readdirSync(dir)
 
   for (const template of templates) {

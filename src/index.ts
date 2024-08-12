@@ -27,7 +27,7 @@ const helpMessage = `\
 Options:
   -t, --template NAME
 
-Available templates:
+Available template:
 ${yellow   ('admin-vue-ts'  )}
 ${green    ('uni-app-ts'    )}`
 
@@ -186,7 +186,7 @@ async function init() {
   const templateDir = path.resolve(
     fileURLToPath(import.meta.url),
     '../..',
-    'templates',
+    'template',
     template.name,
   )
 

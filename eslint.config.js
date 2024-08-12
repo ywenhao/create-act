@@ -222,7 +222,7 @@ export default tseslint.config(
     },
   },
   {
-    name: 'disables/create-vite/templates',
+    name: 'disables/create-vite/template',
     files: [
       'packages/create-vite/template-*/**/*.?([cm])[jt]s?(x)',
       '**/build.config.ts',
