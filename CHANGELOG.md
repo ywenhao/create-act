@@ -1,3 +1,11 @@
+## <small>0.0.5 (2024-08-12)</small>
+
+* fix: 运行命令找不到 ([de51083](https://github.com/ywenhao/create-act/commit/de51083d1c49a00760b4aa13e8f79460a08c3650))
+* fix: 运行命令找不到 ([50b9fcd](https://github.com/ywenhao/create-act/commit/50b9fcd4cb4cd090eb8d290aac28e494601cde37))
+* feat: 删除打tag ([9ae49fb](https://github.com/ywenhao/create-act/commit/9ae49fb4da2c6dc86f00fb4731351ffac25e22c7))
+
+
+
 ## <small>0.0.4 (2024-08-12)</small>
 
 * fix: 修复安装命令问题 ([9000b90](https://github.com/ywenhao/create-act/commit/9000b9055bc9fb5ecdc1eac49a8e009ff1b50000))
