@@ -5,4 +5,9 @@ import { publish } from '@vitejs/release-scripts'
 const tag = process.argv.slice(2)[0] ?? ''
 const provenance = !tag.includes('@')
 
-publish({ defaultPackage: 'create-act', provenance, packageManager: 'pnpm' })
+publish({
+  provenance,
+  getPkgDir: (pkg) => `./`,
+  defaultPackage: 'create-act',
+  packageManager: 'pnpm',
+})
