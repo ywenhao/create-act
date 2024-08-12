@@ -1,3 +1,9 @@
+## <small>0.0.4 (2024-08-12)</small>
+
+* fix: 修复安装命令问题 ([9000b90](https://github.com/ywenhao/create-act/commit/9000b9055bc9fb5ecdc1eac49a8e009ff1b50000))
+
+
+
 ## <small>0.0.3 (2024-08-12)</small>
 
 * fix: publishCi ([0921e1e](https://github.com/ywenhao/create-act/commit/0921e1e3cbd3e2e68c8f32dc787fee797eaa4fa7))
