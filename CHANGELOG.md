@@ -1,3 +1,9 @@
+## <small>0.0.6 (2024-08-12)</small>
+
+* fix: 运行命令找不到 ([8bc821c](https://github.com/ywenhao/create-act/commit/8bc821c317626f5e16c3b4a8b194ed0d39b02800))
+
+
+
 ## <small>0.0.5 (2024-08-12)</small>
 
 * fix: 运行命令找不到 ([de51083](https://github.com/ywenhao/create-act/commit/de51083d1c49a00760b4aa13e8f79460a08c3650))
