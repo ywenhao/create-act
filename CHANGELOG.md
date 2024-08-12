@@ -1,3 +1,9 @@
+## <small>0.0.3 (2024-08-12)</small>
+
+* fix: publishCi ([0921e1e](https://github.com/ywenhao/create-act/commit/0921e1e3cbd3e2e68c8f32dc787fee797eaa4fa7))
+
+
+
 ## <small>0.0.2 (2024-08-09)</small>
 
 * feat: 添加changelog ([a7d8982](https://github.com/ywenhao/create-act/commit/a7d8982f7a9b8bed9f1ed59dd6e5995a008cfed8))
