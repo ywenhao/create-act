@@ -1,3 +1,10 @@
+## <small>0.0.7 (2024-08-13)</small>
+
+* feat: 添加uniapp-template ([b38f3bd](https://github.com/ywenhao/create-act/commit/b38f3bd65f3e06b25923b08bd03683ceed38dbe3))
+* feat: 注释updateTemplateVersions ([57f11a6](https://github.com/ywenhao/create-act/commit/57f11a6e5e8a91f38a0d8ee6a94d6a7ab32a6fba))
+
+
+
 ## <small>0.0.6 (2024-08-12)</small>
 
 * fix: 运行命令找不到 ([8bc821c](https://github.com/ywenhao/create-act/commit/8bc821c317626f5e16c3b4a8b194ed0d39b02800))
