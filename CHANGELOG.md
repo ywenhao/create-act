@@ -1,3 +1,9 @@
+## <small>0.0.9 (2024-08-13)</small>
+
+* fix: 修复gitignore没有push到 ([a42b231](https://github.com/ywenhao/create-act/commit/a42b231d88c216965c6998c740e845e759db8e4a))
+
+
+
 ## <small>0.0.8 (2024-08-13)</small>
 
 * chore: remove console ([0e04df7](https://github.com/ywenhao/create-act/commit/0e04df74574220b30046f33bf06d765506a63b43))
