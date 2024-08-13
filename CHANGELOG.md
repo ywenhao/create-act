@@ -1,3 +1,9 @@
+## <small>0.0.8 (2024-08-13)</small>
+
+* chore: remove console ([0e04df7](https://github.com/ywenhao/create-act/commit/0e04df74574220b30046f33bf06d765506a63b43))
+
+
+
 ## <small>0.0.7 (2024-08-13)</small>
 
 * feat: 添加uniapp-template ([b38f3bd](https://github.com/ywenhao/create-act/commit/b38f3bd65f3e06b25923b08bd03683ceed38dbe3))
