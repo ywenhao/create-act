@@ -161,8 +161,6 @@ async function init() {
         },
       },
     )
-
-    console.log(result)
   } catch (cancelled: any) {
     console.log(cancelled.message)
     return
