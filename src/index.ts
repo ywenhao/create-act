@@ -57,6 +57,7 @@ const TEMPLATES: Template[] = [
 
 const renameFiles: Record<string, string | undefined> = {
   _gitignore: '.gitignore',
+  '_eslint.config.js': 'eslint.config.js',
 }
 
 const defaultTargetDir = 'root-project'

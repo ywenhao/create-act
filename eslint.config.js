@@ -9,12 +9,12 @@ import globals from 'globals'
 
 const require = createRequire(import.meta.url)
 const pkg = require('./package.json')
-const pkgVite = require('./package.json')
+// const pkgVite = require('./package.json')
 
 export default tseslint.config(
   {
     ignores: [
-      'template-*',
+      'template/**',
       '**/dist/**',
       '**/fixtures/**',
       '**/playground-temp/**',
@@ -146,23 +146,23 @@ export default tseslint.config(
       'no-restricted-globals': ['error', 'require', '__dirname', '__filename'],
     },
   },
-  {
-    name: 'vite/node',
-    files: ['packages/vite/src/node/**/*.?([cm])[jt]s?(x)'],
-    rules: {
-      'no-console': ['error'],
-      'n/no-restricted-require': [
-        'error',
-        Object.keys(pkgVite.devDependencies).map((d) => ({
-          name: d,
-          message:
-            `devDependencies can only be imported using ESM syntax so ` +
-            `that they are included in the rollup bundle. If you are trying to ` +
-            `lazy load a dependency, use (await import('dependency')).default instead.`,
-        })),
-      ],
-    },
-  },
+  // {
+  //   name: 'vite/node',
+  //   files: ['packages/vite/src/node/**/*.?([cm])[jt]s?(x)'],
+  //   rules: {
+  //     'no-console': ['error'],
+  //     'n/no-restricted-require': [
+  //       'error',
+  //       Object.keys(pkgVite.devDependencies).map((d) => ({
+  //         name: d,
+  //         message:
+  //           `devDependencies can only be imported using ESM syntax so ` +
+  //           `that they are included in the rollup bundle. If you are trying to ` +
+  //           `lazy load a dependency, use (await import('dependency')).default instead.`,
+  //       })),
+  //     ],
+  //   },
+  // },
   {
     name: 'playground/enforce-esm',
     files: ['playground/**/*.?([cm])[jt]s?(x)'],
@@ -223,10 +223,7 @@ export default tseslint.config(
   },
   {
     name: 'disables/create-vite/template',
-    files: [
-      'packages/create-vite/template-*/**/*.?([cm])[jt]s?(x)',
-      '**/build.config.ts',
-    ],
+    files: ['template/**/*.?([cm])[jt]s?(x)', '**/build.config.ts'],
     rules: {
       'no-undef': 'off',
       'n/no-missing-import': 'off',

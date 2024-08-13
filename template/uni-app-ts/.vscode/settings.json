@@ -1,0 +1,61 @@
+{
+  "files.associations": {
+    "pages.json": "jsonc",
+    "manifest.json": "jsonc"
+  },
+  "eslint.useFlatConfig": true,
+  "prettier.enable": false,
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.stylelint": "explicit",
+    "source.organizeImports": "never"
+  },
+  "create-uniapp-view.setup": true,
+  "create-uniapp-view.scoped": true,
+  "create-uniapp-view.typescript": true,
+  "create-uniapp-view.template": "vue3",
+  "create-uniapp-view.style": "scss",
+  "stylelint.validate": ["css", "scss", "vue", "html"],
+  "stylelint.enable": true,
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue",
+    "html",
+    "markdown",
+    "json",
+    "jsonc",
+    "yaml"
+  ],
+  "cSpell.words": [
+    "darkmode",
+    "dcloudio",
+    "demi",
+    "FILESYSTEMS",
+    "jsbridge",
+    "jscallback",
+    "kuaishou",
+    "luch",
+    "micromessenger",
+    "miniprogram",
+    "nvue",
+    "persistedstate",
+    "preinstall",
+    "quickapp",
+    "stylelint",
+    "tabbar",
+    "toutiao",
+    "uniapp",
+    "unistorage",
+    "unocss",
+    "weixin",
+    "WVJB"
+  ]
+}
