@@ -1,6 +1,6 @@
 import { release } from '@vitejs/release-scripts'
 import colors from 'picocolors'
-import { logRecentCommits, run, updateTemplateVersions } from './releaseUtils'
+import { logRecentCommits, run } from './releaseUtils'
 import extendCommitHash from './extendCommitHash'
 
 release({
@@ -10,7 +10,7 @@ release({
   logChangelog: (pkg) => logRecentCommits(pkg),
   getPkgDir: (pkg) => `./`,
   generateChangelog: async () => {
-    await updateTemplateVersions()
+    // await updateTemplateVersions()
 
     console.log(colors.cyan('\nGenerating changelog...'))
     const changelogArgs = [
