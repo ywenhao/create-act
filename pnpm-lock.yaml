@@ -8,6 +8,9 @@ importers:
 
   .:
     devDependencies:
+      '@bmjs/release-scripts':
+        specifier: ^0.0.2
+        version: 0.0.2
       '@eslint/js':
         specifier: ^9.8.0
         version: 9.8.0
@@ -23,9 +26,6 @@ importers:
       '@types/prompts':
         specifier: ^2.4.9
         version: 2.4.9
-      '@vitejs/release-scripts':
-        specifier: ^1.3.2
-        version: 1.3.2
       conventional-changelog-cli:
         specifier: ^5.0.0
         version: 5.0.0(conventional-commits-filter@5.0.0)
@@ -176,6 +176,9 @@ packages:
   '@babel/types@7.25.0':
     resolution: {integrity: sha512-LcnxQSsd9aXOIgmmSpvZ/1yo46ra2ESYyqLcryaBZOghxy5qqOBjvCWP5JfkI8yl9rlxRgdLTTMCQQRcN2hdCg==}
     engines: {node: '>=6.9.0'}
+
+  '@bmjs/release-scripts@0.0.2':
+    resolution: {integrity: sha512-x0mIGDyvlkWrYisysJa/k42HkdYRSGZF76UsTwOf6iEr+ro+4wlOfHw4+mceMv28nT0PRedWWSnHb6mzPPY7BQ==}
 
   '@conventional-changelog/git-client@1.0.1':
     resolution: {integrity: sha512-PJEqBwAleffCMETaVm/fUgHldzBE35JFk3/9LL6NUA5EXa3qednu+UT6M7E5iBu3zIQZCULYIiZ90fBYHt6xUw==}
@@ -918,9 +921,6 @@ packages:
   '@typescript-eslint/visitor-keys@7.18.0':
     resolution: {integrity: sha512-cDF0/Gf81QpY3xYyJKDV14Zwdmid5+uuENhjH2EqFaF0ni+yAyq/LzMaIJdhNJXZI7uLzwIlA+V7oWoyn6Curg==}
     engines: {node: ^18.18.0 || >=20.0.0}
-
-  '@vitejs/release-scripts@1.3.2':
-    resolution: {integrity: sha512-g4jaMHxdjPiGlFV8qSq8EaE3SYtLHeEGGfmVASvJ+mn+W0kKH0nDXO3u9RR25zVbW9ooamQcpEAx2fTMhlwvkg==}
 
   '@vitest/expect@2.0.4':
     resolution: {integrity: sha512-39jr5EguIoanChvBqe34I8m1hJFI4+jxvdOpD7gslZrVQBKhh8H9eD7J/LJX4zakrw23W+dITQTDqdt43xVcJw==}
@@ -2751,6 +2751,15 @@ snapshots:
       '@babel/helper-validator-identifier': 7.24.7
       to-fast-properties: 2.0.0
 
+  '@bmjs/release-scripts@0.0.2':
+    dependencies:
+      execa: 8.0.1
+      mri: 1.2.0
+      picocolors: 1.0.1
+      prompts: 2.4.2
+      publint: 0.2.9
+      semver: 7.6.3
+
   '@conventional-changelog/git-client@1.0.1(conventional-commits-filter@5.0.0)(conventional-commits-parser@6.0.0)':
     dependencies:
       '@types/semver': 7.5.8
@@ -3252,15 +3261,6 @@ snapshots:
     dependencies:
       '@typescript-eslint/types': 7.18.0
       eslint-visitor-keys: 3.4.3
-
-  '@vitejs/release-scripts@1.3.2':
-    dependencies:
-      execa: 8.0.1
-      mri: 1.2.0
-      picocolors: 1.0.1
-      prompts: 2.4.2
-      publint: 0.2.9
-      semver: 7.6.3
 
   '@vitest/expect@2.0.4':
     dependencies:
