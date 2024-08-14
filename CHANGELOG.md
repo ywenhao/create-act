@@ -1,3 +1,11 @@
+## <small>0.0.10 (2024-08-14)</small>
+
+* feat: 调整uni template ([d7e359f](https://github.com/ywenhao/create-act/commit/d7e359f882981ee113605ab59c8a259b63c217be))
+* feat: 调整uni template ([4398c6c](https://github.com/ywenhao/create-act/commit/4398c6ca0fc710a22cc6369ea282b206fabddb9f))
+* feat: 切换发包脚本 ([7b61235](https://github.com/ywenhao/create-act/commit/7b612358aa00ab49718c255aff40e8856224673e))
+
+
+
 ## <small>0.0.9 (2024-08-13)</small>
 
 * fix: 修复gitignore没有push到 ([a42b231](https://github.com/ywenhao/create-act/commit/a42b231d88c216965c6998c740e845e759db8e4a))
