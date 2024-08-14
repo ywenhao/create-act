@@ -18,7 +18,7 @@ export default async ({ mode }: ConfigEnv) => {
 
   // eslint-disable-next-line node/prefer-global/process
   const env = loadEnv(mode, process.cwd())
-  const { VITE_PORT, VITE_SERVER_BASEURL, VITE_SHOW_SOURCEMAP, VITE_DELETE_CONSOLE } = env
+  const { VITE_PORT, VITE_SERVER_BASEURL, VITE_SHOW_SOURCEMAP, VITE_DELETE_CONSOLE, VITE_API_PREFIX } = env
 
   return <UserConfig>{
     resolve: {
@@ -83,10 +83,10 @@ export default async ({ mode }: ConfigEnv) => {
     server: {
       port: Number(VITE_PORT),
       proxy: {
-        '/api': {
+        [VITE_API_PREFIX]: {
           target: VITE_SERVER_BASEURL,
           changeOrigin: true,
-          rewrite: (path: string) => path.replace(/^\/api/, ''),
+          rewrite: (path: string) => path.replace(new RegExp(`^${VITE_API_PREFIX}`), ''),
         },
       },
     },

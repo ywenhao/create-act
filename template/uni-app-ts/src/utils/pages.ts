@@ -28,7 +28,7 @@ export function isCurrentPageNeedLogin() {
   const currentPage = currentPages[currentPages.length - 1]
   const pages = getAllPages()
   const noLoginPages = pages.filter(item => !item.needLogin)
-  return noLoginPages.some(item => item.path === currentPage)
+  return noLoginPages.some(item => item.path === currentPage?.route)
 }
 
 export type SwitchPageUrl = UniNamespace.SwitchTabOptions['url'] & SwitchTabOptions['url']
