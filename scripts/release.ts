@@ -1,4 +1,4 @@
-import { release } from '@vitejs/release-scripts'
+import { release } from '@bmjs/release-scripts'
 import colors from 'picocolors'
 import { logRecentCommits, run } from './releaseUtils'
 import extendCommitHash from './extendCommitHash'
